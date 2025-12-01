@@ -31,93 +31,66 @@ This microservice is designed to manage store-level data for a retail company. I
     "status": "Active"
   }
 ]
-
-Getting Started
-Prerequisites
+```
+## Getting Started
+### Prerequisites
 
 Ensure you have the following installed:
-
 Python 3.8 or higher
-
 Azure SQL Database (for database)
-
 Docker (optional, for containerized setup)
 
-Installation
+### Installation
 
 Clone the repository:
-
 git clone https://github.com/your-username/store-operations-service.git
 cd store-operations-service
 
-
-Create a virtual environment and activate it:
+### Create a virtual environment and activate it:
 
 python3 -m venv venv
 source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
 
 
-Install dependencies:
-
+## Install dependencies:
 pip install -r requirements.txt
-
-
 Create a .env file in the root directory and add your database credentials:
-
 DB_SERVER=yourserver.database.windows.net
 DB_NAME=StoreDB
 DB_USER=dbadmin
 DB_PASSWORD=YourPassword123
 
-Running the Application
-
+## Running the Application
 To run the application in development mode:
-
 uvicorn app.main:app --reload
-
-
 To run the application in production (using Gunicorn):
-
 gunicorn -w 4 -k uvicorn.workers.UvicornWorker app.main:app
 
-Running Tests
-
-You can run the unit tests using pytest:
-
+## Running Tests
+You can run the unit tests using pytest: 
 pytest
 
-Docker Setup (Optional)
-
+## Docker Setup (Optional)
 To run the app in a Docker container, use the following commands:
-
 Build the Docker image:
-
 docker build -t store-operations-service .
 
-
-Run the container:
-
+## Run the container:
 docker run -p 8000:8000 store-operations-service
-
 Environment Variables
-
 Add your environment variables (for database connection) to the .env file:
-
 DB_SERVER=yourserver.database.windows.net
 DB_NAME=StoreDB
 DB_USER=dbadmin
 DB_PASSWORD=YourPassword123
 
-Troubleshooting
-
+## Troubleshooting
 Error 500 (Internal Server Error): Check the database connection string and ensure that your database is accessible.
-
 Error 404: Make sure the endpoint exists, and that you're using the correct URL.
 
-License
-
+## License
 This project is licensed under the MIT License - see the LICENSE
- file for details.
+file for details.
 
 
 
