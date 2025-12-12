@@ -88,6 +88,7 @@ DB_PASSWORD=YourPassword123
 Error 500 (Internal Server Error): Check the database connection string and ensure that your database is accessible.
 Error 404: Make sure the endpoint exists, and that you're using the correct URL.
 
+Link of the repository:https://github.com/dummyyy0987-create/store-operations-service.git
 ## License
 This project is licensed under the MIT License - see the LICENSE
 file for details.
